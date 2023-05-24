@@ -1,4 +1,4 @@
-package shodan
+package host
 
 const BaseURL = "https://api.shodan.io"
 
