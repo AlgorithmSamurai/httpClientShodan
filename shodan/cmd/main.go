@@ -2,10 +2,9 @@ package main
 
 import (
 	"fmt"
+	"github.com/AlgorithmSamurai/httpClientShodan/shodan/host"
 	"log"
 	"os"
-
-	"github.com/blackhat-go/bhg/ch-3/shodan/shodan"
 )
 
 func main() {
@@ -13,7 +12,7 @@ func main() {
 		log.Fatalln("Usage: main <searchterm>")
 	}
 	apiKey := os.Getenv("SHODAN_API_KEY")
-	s := shodan.New(apiKey)
+	s := host.New(apiKey)
 	info, err := s.APIInfo()
 	if err != nil {
 		log.Panicln(err)
